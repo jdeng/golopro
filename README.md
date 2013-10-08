@@ -72,11 +72,12 @@ func (qr *QuickReport) Add(rec LogRecord) {
 </code></pre>
 
 * and probably some tweaks for the main() function
+
 <pre><code>
-...
-parser := NewCSVParser((*comma)[0])
-reportMgr := NewReportManager()
-reportMgr.RegisterReport(NewQuickReport(ks))
-...
+  ...
+  parser := NewCSVParser((*comma)[0])
+  reportMgr := NewReportManager()
+  reportMgr.RegisterReport(NewQuickReport(ks))
+  ...
 </code></pre>
 
