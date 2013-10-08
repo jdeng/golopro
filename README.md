@@ -3,7 +3,7 @@ golopro
 
 Tiny multithreaded log processing framework in golang
 
-The default implementation essentially can do the work of <code>cut/awk | sort | uniq -c </code> for multiple CSV files usingle golang's multithreading. 
+The default implementation essentially can do the work of <code>cut/awk | sort | uniq -c </code> for multiple CSV compatible (e.g., Apache access logs) files usingle golang's multithreading. 
 
 ## Usage
 
@@ -16,6 +16,10 @@ Usage of ./lopro:
   -out=".": output directory
   -procs=1: number of processes
 </code></pre>
+
+### Hints
+* Use <code>ln -s</code> to link the log files to the input directory
+* Compressed the files to save disk I/O
 
 ## Customization
 There are two interfaces to be implemented.
